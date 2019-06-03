@@ -5,6 +5,12 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme: Theme) => ({
+  form: {
+    maxWidth: "960px",
+    marginLeft: "auto",
+    marginRight: "auto"
+  },
+
   content: {
     // margin: theme.spacing(2)
   }
@@ -29,6 +35,7 @@ const Login = () => {
         <Admin />
       ) : (
         <form
+          className={classes.form}
           onSubmit={e => {
             e.preventDefault();
           }}
